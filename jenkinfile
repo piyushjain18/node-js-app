@@ -5,7 +5,5 @@ node {
 
         def customImage = docker.build("onlypiyushjain:nodejsapp")
 
-        /* Push the container to the custom Registry */
-        customImage.push()
     }
 }
