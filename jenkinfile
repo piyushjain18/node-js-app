@@ -1,0 +1,11 @@
+node {
+    checkout scm
+
+    docker.withRegistry('https://registry.hub.docker.com', 'dockerhubcreds') {
+
+        def customImage = docker.build("onlypiyushjain:nodejsapp")
+
+        /* Push the container to the custom Registry */
+        customImage.push()
+    }
+}
